@@ -26,7 +26,7 @@
                 <td>@user.Name</td>
                 <td>@user.Email</td>
                 <td>@user.Location</td>
-                <td><a class="btn btn-dark">Ändra</a></td>
+                <td><a class="btn btn-dark" href="/users/Edit/@user.id">Ändra</a></td>
             </tr>
         }
     </tbody>
@@ -37,6 +37,6 @@ else
     <p>Inga användare hittades.</p>
 }
 
-<div>
-    <button class="btn btn-success">Lägg till användare</button>
+<div class="mb-3">
+    <a href="/users/adduser" class="btn btn-success">Lägg till användare</a>
 </div>

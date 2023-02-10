@@ -23,7 +23,7 @@ public class AddUserModel : PageModel
     {
     }
 
-    public void OnPost()
+    public IActionResult OnPost()
     {
         var userDomainModel = new User()
         {
@@ -36,5 +36,6 @@ public class AddUserModel : PageModel
         };
         dbContext._users.Add(userDomainModel);
         dbContext.SaveChanges();
+        return RedirectToPage("users/listuser");
     }
 }
